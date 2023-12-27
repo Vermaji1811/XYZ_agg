@@ -75,7 +75,8 @@ function App() {
     try {
       setMiniBrowserLoading(true); 
       const res = await fetch(`${url}?url=${articleUrl}&apiKey=${API_KEY}`);
-      // const data = await res.json();
+      const data = await res.json();
+      console.log(data);
       setMiniBrowserLoading(false);
     } catch (error) {
       console.error('Error fetching news:', error);
