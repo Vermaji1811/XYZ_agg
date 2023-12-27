@@ -75,7 +75,7 @@ function App() {
     try {
       setMiniBrowserLoading(true); 
       const res = await fetch(`${url}?url=${articleUrl}&apiKey=${API_KEY}`);
-      const data = await res.json();
+      // const data = await res.json();
       setMiniBrowserLoading(false);
     } catch (error) {
       console.error('Error fetching news:', error);
@@ -100,7 +100,7 @@ function App() {
             alignItems: 'center', 
           }}>
           <span style={{ marginRight: '20px' }}>News App</span>
-          <a className="github-link" href="https://github.com/Vermaji1811/XYZ_agg" target='_blank'>GitHub Link</a>
+          <a className="github-link" href="https://github.com/Vermaji1811/XYZ_agg" target='_blank' rel="noreferrer">GitHub Link</a>
           </Typography>
 
           <Box sx={{ flexGrow: 1, mx: 2, display: 'flex', gap: '16px', justifyContent: 'center', alignItems: 'center' }}>
